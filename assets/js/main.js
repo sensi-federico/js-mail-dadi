@@ -1,6 +1,5 @@
 
-const exDadi = document.getElementById('dadi');
-
+// ESERCIZIO MAIl
 
 const signedMail = ['hello@mail.com', 'world@mail.com'];
 
@@ -20,7 +19,7 @@ for (let j = 0; j < signedMail.length; j++) {
         if (inputMail !== signedMail[j]) {
             console.log('no');
             alert('Email errata, riprova.');
-            
+
         } else if (inputMail === signedMail[j]) {
             console.log('si');
             alert('Email corretta,');
@@ -28,6 +27,22 @@ for (let j = 0; j < signedMail.length; j++) {
             buttonNone.style.display = 'none';
             buttonDadi.style.display = 'block';
         }
-        alert = function () {};
+        alert = function () { };
     })
 }
+
+
+// ESERCIZIO DADI
+
+const pcSquare = document.getElementById('pc');
+const userSquare = document.getElementById('user');
+
+buttonDadi.addEventListener('click', function () {
+
+    function shot(e) {
+        return Math.floor(Math.random() * e);
+    }
+
+    pcSquare.append(shot(6));
+    userSquare.append(shot(6));
+})
