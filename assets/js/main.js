@@ -36,6 +36,12 @@ function access () {
 
 // ESERCIZIO DADI 
 
+const player_1 = document.getElementById('player_results');
+player_1.style.display = 'none';
+const player_2 = document.getElementById('player_2_results');
+player_2.style.display = 'none';
+const buttonShot = document.getElementById('shot');
+buttonShot.style.display = 'none';
 
 const player = Math.ceil(Math.random() * 6);
 const bot = Math.ceil(Math.random() * 6);
