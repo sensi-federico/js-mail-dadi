@@ -19,11 +19,15 @@
 
         <div id="dadi" class="block-dadi bg-primary d-flex flex-column align-items-center">
             <div class="dadi d-flex justify-content-center">
-                <div id="player_results" class="square me-5"></div>
-                <div id="player_2_results" class="square"></div>
+                <div id="player_results" class="square me-5 text-center">
+                    <h1 id="pointOne" class="mt-4"></h1>
+                </div>
+                <div id="bot_results" class="square text-center">
+                    <h1 id="pointTwo" class="mt-4"></h1>
+                </div>
             </div>
-            <div id="shot" class="btn btn-danger mt-4">SHOT!</div>
-
+            <div id="shot" class="btn btn-danger mt-4" onclick="shots()">SHOT!</div>
+            <h1 class="text-white mt-2" id="winner"></h1>
         </div>
     </div>
 
