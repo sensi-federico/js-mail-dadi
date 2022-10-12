@@ -10,23 +10,24 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-    
-
     <div class="container">
-        <div class="ex-mail mt-5">
-            <input type="email" name="mail" id="mail">
-            <button id="button" class="btn btn-primary ms-2">Submit</button>
+        <div class="block-mail d-flex justify-content-center align-items-center">
+            <input type="text" name="mail" id="mail">
+            <div id="submit" class="btn btn-primary ms-3" onclick="access()">Submit</div>
         </div>
-        <div class="exdadi d-flex flex-column align-items-center" id="exdadi" >
-            <div class="points d-flex justify-content-center align-items-center">
-                <div id="pc" class="square me-5"></div>
-                <div id="user" class="square"></div>
+
+
+        <div class="block-dadi bg-primary d-flex flex-column align-items-center">
+            <div class="dadi d-flex justify-content-center">
+                <div class="square me-5"></div>
+                <div class="square"></div>
             </div>
-            <div class="btn btn-primary mt-3" id="dadiButton">Tira i dadi!</div>
+            <div id="shot" class="btn btn-danger mt-4">SHOT!</div>
 
         </div>
     </div>
 
+    
 
 
     <script src="./assets/js/main.js"></script>

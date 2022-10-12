@@ -1,48 +1,53 @@
 
 // ESERCIZIO MAIl
 
-const signedMail = ['hello@mail.com', 'world@mail.com'];
+function access () {
 
-const inputNone = document.getElementById('mail');
-const buttonNone = document.getElementById('button');
-const buttonDadi = document.getElementById('dadiButton');
-buttonDadi.style.display = 'none';
-
-for (let j = 0; j < signedMail.length; j++) {
-
-    const button = document.getElementById('button');
-
-    button.addEventListener('click', function () {
-        const inputMail = document.getElementById('mail').value;
-        console.log(inputMail);
-
-        if (inputMail !== signedMail[j]) {
-            console.log('no');
-            alert('Email errata, riprova.');
-
-        } else if (inputMail === signedMail[j]) {
-            console.log('si');
-            alert('Email corretta,');
-            inputNone.style.display = 'none';
-            buttonNone.style.display = 'none';
-            buttonDadi.style.display = 'block';
+    // const userEmail = prompt("Inserisci email");
+    const userEmail = document.getElementById('mail').value;
+    console.log(userEmail);
+    
+    const emailAddress = [
+        "hello@mail.com", 
+        "world@mail.com", 
+        "admin@mail.com", 
+        "user@mail.com"
+    ];
+    
+    let login;
+    
+    for (let i = 0; i < emailAddress.length; i++) {
+        const email = emailAddress[i];
+    
+    
+        if (userEmail === email) {
+            login = true;
         }
-        alert = function () { };
-    })
+    
+    }
+    
+    if (login) {
+        console.log('Welcome');
+    } else {
+        console.log('Access denied');
+    }
 }
 
 
-// ESERCIZIO DADI
+// ESERCIZIO DADI 
 
-const pcSquare = document.getElementById('pc');
-const userSquare = document.getElementById('user');
 
-buttonDadi.addEventListener('click', function () {
+const player = Math.ceil(Math.random() * 6);
+const bot = Math.ceil(Math.random() * 6);
 
-    function shot(e) {
-        return Math.floor(Math.random() * e);
-    }
+let winner;
 
-    pcSquare.append(shot(6));
-    userSquare.append(shot(6));
-})
+if (player > bot) {
+    winner = "player";
+} else if (player < bot) {
+    winner = "bot";
+} else {
+    winner = "Pareggio";
+}
+console.log(player, bot);
+console.log(winner);
