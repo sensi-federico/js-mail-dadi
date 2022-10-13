@@ -6,6 +6,10 @@ const player_2 = document.getElementById('bot_results');
 player_2.style.display = 'none';
 const buttonShot = document.getElementById('shot');
 buttonShot.style.display = 'none';
+const playerName = document.querySelector('.player-name');
+playerName.style.display = 'none';
+const botName = document.querySelector('.bot-name');
+botName.style.display = 'none';
 
 // ESERCIZIO MAIl
 
@@ -14,6 +18,8 @@ function access() {
     // const userEmail = prompt("Inserisci email");
     const userEmail = document.getElementById('mail').value;
     console.log(userEmail);
+
+    const access = document.getElementById('access');
 
     const emailAddress = [
         "hello@mail.com",
@@ -36,14 +42,18 @@ function access() {
 
     if (login) {
         console.log('Welcome');
+        access.innerHTML = 'Accesso consentito!';
 
         player_1.style.display = 'block';
         player_2.style.display = 'block';
         buttonShot.style.display = 'block';
+        playerName.style.display = 'block';
+        botName.style.display = 'block';
 
 
     } else {
         console.log('Access denied');
+        access.innerHTML = 'Accesso negato!';
     }
 }
 

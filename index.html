@@ -11,13 +11,20 @@
 </head>
 <body>
     <div class="container">
-        <div class="block-mail d-flex justify-content-center align-items-center">
-            <input type="text" name="mail" id="mail">
-            <div id="submit" class="btn btn-primary ms-3" onclick="access()">Submit</div>
+        <div class="block-mail text-center">
+            <div class="d-flex justify-content-center align-items-center pt-2">
+                <input type="text" name="mail" id="mail">
+                <div id="submit" class="btn btn-primary ms-3" onclick="access()">Submit</div>
+            </div>
+            <h5 id="access" class="pt-3 text-dark"></h5>
         </div>
 
 
         <div id="dadi" class="block-dadi bg-primary d-flex flex-column align-items-center">
+            <div class="title d-flex">
+                <h2 class="player-name me-5 mt-5">player</h2>
+                <h2 class="bot-name ms-4 me-4 mt-5">bot</h2>
+            </div>
             <div class="dadi d-flex justify-content-center">
                 <div id="player_results" class="square me-5 text-center">
                     <h1 id="pointOne" class="mt-4"></h1>
